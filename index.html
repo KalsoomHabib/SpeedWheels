@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SpeedWheels</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="#" class="logo">SpeedWheels</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="cars.html">Cars</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Rent Premium Cars at Affordable Prices</h1>
+        <p>Choose from a wide range of vehicles for your perfect journey</p>
+        <button class="btn" style="margin-top: 1rem">Browse Cars</button>
+      </div>
+    </section>
+
+    <!-- Featured Cars -->
+    <section class="featured-cars" id="cars">
+      <h2>Featured Vehicles</h2>
+      <div class="cars-grid">
+        <div class="car-card">
+          <img
+            src="https://images.unsplash.com/photo-1555215695-3004980ad54e"
+            alt="Sedan"
+          />
+          <div class="car-info">
+            <h3>Premium Sedan</h3>
+            <p>Comfortable and luxurious travel experience</p>
+            <div class="price">$59/day</div>
+            <button class="btn" onclick="bookCar('Premium Sedan')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+        <div class="car-card">
+          <img
+            src="https://images.unsplash.com/photo-1542362567-b07e54358753"
+            alt="SUV"
+          />
+          <div class="car-info">
+            <h3>Family SUV</h3>
+            <p>Spacious and perfect for family trips</p>
+            <div class="price">$89/day</div>
+            <button class="btn" onclick="bookCar('Family SUV')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+        <div class="car-card">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+            alt="Sports Car"
+          />
+          <div class="car-info">
+            <h3>Sports Car</h3>
+            <p>Experience ultimate driving performance</p>
+            <div class="price">$129/day</div>
+            <button class="btn" onclick="bookCar('Sports Car')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            SpeedWheels has been providing quality car rental services since
+            2010. We guarantee the best prices and premium vehicles.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: SpeedWheels@gmail.com</p>
+          <p>Phone: +923597648210</p>
+          <p>Address: 589 Main Road, ABC,XYZ</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function bookCar(carName) {
+        let userName = prompt("Enter your name:");
+
+        if (userName) {
+          var firstChar = userName.slice(0, 1);
+          var upperCase = firstChar.toUpperCase();
+          var restName = userName.slice(1, userName.length);
+          restName = restName.toLowerCase();
+          var capatalized = upperCase + restName;
+          alert(
+            "Thank you, " + capatalized + "! You have booked a " + carName + "."
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
